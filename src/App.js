@@ -1,12 +1,14 @@
 import React from 'react';
 import { ThemeProvider } from 'react-native-elements';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import CONFIG from '~/constants/envConfig';
 import MainScreen from '~/screens/MainScreen';
 import theme from '~/theme';
 
 const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io',
+  uri: CONFIG.api,
   cache: new InMemoryCache(),
+  connectToDevTools: CONFIG.env === 'development',
 });
 
 const App = () => (

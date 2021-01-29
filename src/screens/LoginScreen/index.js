@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Button, Input } from 'react-native-elements';
+import { SocialIcon } from 'react-native-elements';
 import { setToken } from '~/utils/asyncStorage';
 import authRoutes from '~/routes/authRoutes';
 const LoginScreen = () => {
@@ -11,9 +11,18 @@ const LoginScreen = () => {
 
   return (
     <View>
-      <Input label='Account' placeholder='email@adress.com' />
-      <Input label='Password' placeholder='Password' />
-      <Button title='Submit' onPress={onSubmit} />
+      <SocialIcon
+        title='Sign In With Facebook'
+        button
+        type='facebook'
+        onPress={onSubmit}
+      />
+      <SocialIcon
+        title='Sign In With Google'
+        button
+        type='google'
+        onPress={onSubmit}
+      />
     </View>
   );
 };

@@ -1,19 +1,10 @@
 import { Navigation } from 'react-native-navigation';
-import App from '~/App';
+import { getToken } from '~/utils/asyncStorage';
+import authRoutes from '~/routes/authRoutes';
+import noAuthRoutes from '~/routes/noAuthRoutes';
+import '~/routes';
 
-Navigation.registerComponent('com.myApp.WelcomeScreen', () => App);
-Navigation.events().registerAppLaunchedListener(() => {
-  Navigation.setRoot({
-    root: {
-      stack: {
-        children: [
-          {
-            component: {
-              name: 'com.myApp.WelcomeScreen',
-            },
-          },
-        ],
-      },
-    },
-  });
+Navigation.events().registerAppLaunchedListener(async () => {
+  const isLogined = await getToken();
+  isLogined ? authRoutes() : noAuthRoutes();
 });

@@ -14,9 +14,8 @@ const Item = ({ item }) => {
   );
 };
 
-const MainScrenn = () => {
+const HomeScrenn = () => {
   const { data, loading } = useQuery(GET_EXCHANGE_RATES);
-
   if (loading) {
     return (
       <View>
@@ -29,9 +28,11 @@ const MainScrenn = () => {
     <FlatList
       data={data.rates}
       renderItem={({ item }) => <Item item={item} />}
-      keyExtractor={(item) => item.currency.toString()}
+      keyExtractor={item => item.currency.toString()}
     />
   );
 };
 
-export default MainScrenn;
+HomeScrenn.screenName = 'Home';
+
+export default HomeScrenn;

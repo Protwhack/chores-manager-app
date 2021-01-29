@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'react-native-elements';
+import { NavigationProvider } from 'react-native-navigation-hooks';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import CONFIG from '~/constants/envConfig';
-import MainScreen from '~/screens/MainScreen';
 import theme from '~/theme';
 
 const client = new ApolloClient({
@@ -11,10 +11,12 @@ const client = new ApolloClient({
   connectToDevTools: CONFIG.env === 'development',
 });
 
-const App = () => (
+const App = Component => props => (
   <ApolloProvider client={client}>
     <ThemeProvider theme={theme}>
-      <MainScreen />
+      <NavigationProvider value={{ componentId: props.componentId }}>
+        <Component {...props} />
+      </NavigationProvider>
     </ThemeProvider>
   </ApolloProvider>
 );

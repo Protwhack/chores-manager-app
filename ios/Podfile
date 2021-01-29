@@ -23,12 +23,3 @@ target 'choresManager' do
     flipper_post_install(installer)
   end
 end
-
-target 'choresManager-tvOS' do
-  # Pods for choresManager-tvOS
-
-  target 'choresManager-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end

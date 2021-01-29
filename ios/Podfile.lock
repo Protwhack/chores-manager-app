@@ -305,6 +305,8 @@ PODS:
     - React-Core
     - React-RCTImage
     - React-RCTText
+  - RNCAsyncStorage (1.13.3):
+    - React-Core
   - RNVectorIcons (8.0.0):
     - React-Core
   - Yoga (1.14.0)
@@ -359,6 +361,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
+  - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -430,6 +433,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   ReactNativeNavigation:
     :path: "../node_modules/react-native-navigation"
+  RNCAsyncStorage:
+    :path: "../node_modules/@react-native-async-storage/async-storage"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -473,10 +478,11 @@ SPEC CHECKSUMS:
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
   ReactNativeNavigation: f32d9ba91d2a88e182b23ecabdee73d7a5ee74d1
+  RNCAsyncStorage: da95b83e241a7f5efe3da1a949b3ec3175380be0
   RNVectorIcons: f67a1abce2ec73e62fe4606e8110e95a832bc859
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: a4691245c301428eb789d818f252fde9505825b1
+PODFILE CHECKSUM: ec67c6c1fb2af7d6400a0d8c886cbe190591d0d5
 
 COCOAPODS: 1.9.1

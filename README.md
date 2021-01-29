@@ -5,7 +5,7 @@
 ```bash
 cp src/constants/envConfig.example.js src/constants/envConfig.js
 yarn install
-cd ios && pod install && cd ..
+pod install --project-directory=ios
 ```
 
 Install dev-tools

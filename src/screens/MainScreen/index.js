@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
-import { ListItem } from 'react-native-elements'
+import { ListItem } from 'react-native-elements';
 import { useQuery } from '@apollo/client';
 import { GET_EXCHANGE_RATES } from '~/gql/exchange';
 

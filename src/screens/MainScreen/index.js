@@ -1,16 +1,16 @@
 import React from 'react';
-import { View, Text, FlatList, Pressable } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
+import { ListItem } from 'react-native-elements'
 import { useQuery } from '@apollo/client';
 import { GET_EXCHANGE_RATES } from '~/gql/exchange';
 
-const Item = ({ item, onPress }) => {
+const Item = ({ item }) => {
   const { currency, rate } = item;
   return (
-    <Pressable onPress={onPress}>
-      <Text>
-        {currency} : {rate}
-      </Text>
-    </Pressable>
+    <ListItem>
+      <ListItem.Title>{currency}</ListItem.Title>
+      <ListItem.Title>{rate}</ListItem.Title>
+    </ListItem>
   );
 };
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Button } from 'react-native-elements';
-import { setToken } from '~/utils/asyncStorage';
+import { setToken, setHomeInfo } from '~/utils/asyncStorage';
 import noAuthRoutes from '~/routes/noAuthRoutes';
 
 const OtherScreen = () => {
   const onLogoutClick = async () => {
     await setToken('');
+    await setHomeInfo('');
     noAuthRoutes();
   };
 

@@ -1,28 +1,41 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Button, Input, Text } from 'react-native-elements';
-import { push } from '~/routes/utils';
+import { useForm } from 'react-hook-form';
+import { Button, Text } from 'react-native-elements';
+import TextInput from '~/components/form/TextInput';
 import authRoutes from '~/routes/authRoutes';
+import { push } from '~/routes/utils';
 import { setHomeInfo } from '~/utils/asyncStorage';
 
 const HomeEntrance = ({ componentId }) => {
-  const goToAddHomeScreen = () => {
-    push(componentId, 'AddHome');
+  const { control, handleSubmit, errors } = useForm();
+  const onSubmit = data => {
+    setHomeInfo(data.account);
+    authRoutes(data.account);
   };
 
-  const onSubmit = () => {
-    const homeName = 'Bill';
-    setHomeInfo(homeName);
-    authRoutes(homeName);
+  const goToAddHomeScreen = () => {
+    push(componentId, 'AddHome');
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.joinBlock}>
         <Text>Join the Home</Text>
-        <Input placeholder={`Home's Account`} />
-        <Input placeholder={`Home's Password`} />
-        <Button onPress={onSubmit} title='Join' />
+        <TextInput
+          control={control}
+          name='account'
+          placeholder='Account'
+          error={errors.account}
+        />
+        <TextInput
+          control={control}
+          name='password'
+          placeholder='Password'
+          error={errors.password}
+          inputProps={{ secureTextEntry: true }}
+        />
+        <Button onPress={handleSubmit(onSubmit)} title='Join' />
       </View>
       <Button onPress={goToAddHomeScreen} title='Create a new Home' />
     </View>

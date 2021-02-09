@@ -26,7 +26,7 @@ const HomeScrenn = () => {
 
   return (
     <FlatList
-      data={data.rates}
+      data={data?.rates ?? []}
       renderItem={({ item }) => <Item item={item} />}
       keyExtractor={item => item.currency.toString()}
     />

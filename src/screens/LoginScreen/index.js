@@ -2,11 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 import { SocialIcon } from 'react-native-elements';
 import { setToken } from '~/utils/asyncStorage';
-import authRoutes from '~/routes/authRoutes';
+import noHomeRoutes from '~/routes/noHomeRoutes';
 const LoginScreen = () => {
   const onSubmit = () => {
     setToken('TEMP_TOKEN');
-    authRoutes();
+    noHomeRoutes();
   };
 
   return (

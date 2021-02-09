@@ -6,8 +6,8 @@ const rootNavigator = () => {
     root: {
       bottomTabs: {
         children: [
-          getBottomStack('Home', 'Home'),
-          getBottomStack('Other', 'Other'),
+          getBottomStack('Home', 'Calendar'),
+          getBottomStack('Other', 'All Chores'),
         ],
       },
     },

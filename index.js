@@ -8,6 +8,6 @@ import '~/routes/registerScreens';
 Navigation.events().registerAppLaunchedListener(async () => {
   const [homeInfo, isLogined] = await Promise.all([getHomeInfo(), getToken()]);
   if (!isLogined) return noAuthRoutes();
-  homeInfo ? authRoutes() : noHomeRoutes();
+  homeInfo ? authRoutes(homeInfo) : noHomeRoutes();
   return;
 });

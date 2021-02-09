@@ -11,8 +11,9 @@ const HomeEntrance = ({ componentId }) => {
   };
 
   const onSubmit = () => {
-    setHomeInfo('HomeName');
-    authRoutes();
+    const homeName = 'Bill';
+    setHomeInfo(homeName);
+    authRoutes(homeName);
   };
 
   return (

@@ -6,8 +6,9 @@ import authRoutes from '~/routes/authRoutes';
 
 const AddHome = () => {
   const onSubmit = () => {
-    setHomeInfo('Name');
-    authRoutes();
+    const homeName = 'Bill';
+    setHomeInfo(homeName);
+    authRoutes(homeName);
   };
 
   return (

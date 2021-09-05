@@ -1,4 +1,4 @@
-package com.choresmanager;
+package com.protwhack.choresmanager;
 
 import com.reactnativenavigation.NavigationActivity;
 

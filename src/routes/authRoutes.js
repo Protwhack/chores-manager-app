@@ -16,6 +16,12 @@ const bottomTabs = [
     icon: calendarInactiveIcon,
     selectedIcon: calendarActiveIcon,
   },
+  {
+    name: 'Example',
+    tabName: 'Example',
+    icon: calendarInactiveIcon,
+    selectedIcon: calendarActiveIcon,
+  },
 ];
 
 const authRoutes = title => {

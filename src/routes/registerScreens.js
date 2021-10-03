@@ -8,6 +8,7 @@ import HomeEntranceScreen from '~/screens/HomeEntranceScreen';
 import LoginScreen from '~/screens/LoginScreen';
 import OtherScreen from '~/screens/OtherScreen';
 import SideMenuScreen from '~/screens/SideMenuScreen';
+import ExampleScreen from '~/screens/ExampleScreen';
 
 const screens = [
   AddHomeScreen,
@@ -17,6 +18,7 @@ const screens = [
   LoginScreen,
   OtherScreen,
   SideMenuScreen,
+  ExampleScreen,
 ];
 
 registerScreens(screens, App);

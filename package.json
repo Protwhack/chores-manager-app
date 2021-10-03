@@ -23,6 +23,7 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-status-bar-height": "^2.6.0",
     "react-native-vector-icons": "^8.0.0",
+    "realm": "^10.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

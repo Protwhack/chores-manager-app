@@ -15,7 +15,7 @@ const Item = ({ item }) => {
   );
 };
 
-const HomeScrenn = () => {
+const HomeScreen = () => {
   const { data, loading } = useQuery(GET_EXCHANGE_RATES);
   if (loading) {
     return (
@@ -34,6 +34,6 @@ const HomeScrenn = () => {
   );
 };
 
-HomeScrenn.screenName = 'Home';
+HomeScreen.screenName = 'Home';
 
-export default HomeScrenn;
+export default HomeScreen;

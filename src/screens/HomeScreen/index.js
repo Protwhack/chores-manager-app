@@ -3,6 +3,7 @@ import { View, Text, FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { useQuery } from '@apollo/client';
 import { GET_EXCHANGE_RATES } from '~/gql/exchange';
+import {keyExtractor} from '~/utils/list';
 
 const Item = ({ item }) => {
   const { currency, rate } = item;
@@ -28,7 +29,7 @@ const HomeScrenn = () => {
     <FlatList
       data={data?.rates ?? []}
       renderItem={({ item }) => <Item item={item} />}
-      keyExtractor={item => item.currency.toString()}
+      keyExtractor={keyExtractor}
     />
   );
 };

@@ -6,6 +6,7 @@ import { getStatusBarHeight } from 'react-native-status-bar-height';
 import noHomeRoutes from '~/routes/noHomeRoutes';
 import theme from '~/theme';
 import {normalize} from '~/utils/styling';
+import {keyExtractor} from '~/utils/list';
 
 import logoPng from 'Assets/logo-side-menu.png';
 
@@ -49,8 +50,6 @@ const list = [
     ]
   },
 ];
-
-const keyExtractor = (item, index) => index.toString();
 
 const renderItem = ({ item }) => (
   <ListItem

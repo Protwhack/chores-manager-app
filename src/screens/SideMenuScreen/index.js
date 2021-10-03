@@ -1,12 +1,11 @@
 import React from 'react';
-import { useNavigationButtonPress } from 'react-native-navigation-hooks';
-import { StyleSheet, Text, View, SectionList } from "react-native";
+import { StyleSheet, Text, View, SectionList } from 'react-native';
 import { ListItem, Icon, Image } from 'react-native-elements';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import noHomeRoutes from '~/routes/noHomeRoutes';
 import theme from '~/theme';
-import {normalize} from '~/utils/styling';
-import {keyExtractor} from '~/utils/list';
+import { normalize } from '~/utils/styling';
+import { keyExtractor } from '~/utils/list';
 
 import logoPng from 'Assets/logo-side-menu.png';
 
@@ -14,7 +13,7 @@ const { colors } = theme;
 
 const list = [
   {
-    title: "My Home",
+    title: 'My Home',
     data: [
       {
         title: 'Invite new roommate',
@@ -24,10 +23,10 @@ const list = [
         title: 'Edit my house’s name',
         icon: 'edit-3',
       },
-    ]
+    ],
   },
   {
-    title: "Baboon’s Chores",
+    title: 'Baboon’s Chores',
     data: [
       {
         title: 'Information & Help',
@@ -37,17 +36,17 @@ const list = [
         title: 'Rate & Feedback',
         icon: 'star',
       },
-    ]
+    ],
   },
   {
-    title: "My Account",
+    title: 'My Account',
     data: [
       {
         title: 'Leave this home',
         icon: 'log-out',
-        onPress: noHomeRoutes
+        onPress: noHomeRoutes,
       },
-    ]
+    ],
   },
 ];
 
@@ -57,15 +56,9 @@ const renderItem = ({ item }) => (
     underlayColor={colors.underlay}
     onShowUnderlay={() => {}}
     onHideUnderlay={() => {}}
-    onPress={item.onPress}
-  >
+    onPress={item.onPress}>
     <ListItem.Content style={styles.item}>
-      <Icon
-        style={styles.itemIcon}
-        type="feather"
-        name={item.icon}
-        size={40}
-      />
+      <Icon style={styles.itemIcon} type='feather' name={item.icon} size={40} />
       <ListItem.Title style={styles.itemTitle}>{item.title}</ListItem.Title>
     </ListItem.Content>
   </ListItem>
@@ -87,16 +80,11 @@ const SideMenuScreen = ({
 }) => (
   <View style={styles.container}>
     <View style={styles.appInfoContainer}>
-      {false && <SvgUri
-        width="80"
-        height="80"
-        svgXmlData={LogoSvg}
-      />}
       <Image style={styles.appImage} source={logoPng} />
       <Text style={styles.appName}>Baboon’s Chores</Text>
     </View>
     <View style={styles.profile}>
-      <View style={styles.avatar}/>
+      <View style={styles.avatar} />
       <Text style={styles.name}>Alex</Text>
     </View>
     <SectionList
@@ -152,7 +140,7 @@ const styles = StyleSheet.create({
   },
   name: {
     marginTop: 5,
-    fontSize: normalize(14)
+    fontSize: normalize(14),
   },
 
   listContainer: {
@@ -177,8 +165,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
-  itemIcon: {
-  },
+  itemIcon: {},
   itemTitle: {
     marginLeft: normalize(20),
     fontSize: normalize(14),

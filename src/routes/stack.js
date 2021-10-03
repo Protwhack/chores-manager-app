@@ -69,6 +69,6 @@ export const getNormalStack = (name, title) => ({
   component: getComponentWithTopBar(name, title),
 });
 
-export const getPlainScreenOptions = (name) => ({
+export const getPlainScreenOptions = name => ({
   component: getComponentWithoutTopBar(name),
 });

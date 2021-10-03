@@ -1,13 +1,21 @@
-import Realm from "realm";
-import React, {useState} from 'react';
+/* eslint-disable react-hooks/rules-of-hooks */
+import Realm from 'realm';
+import React from 'react';
 import { ThemeProvider } from 'react-native-elements';
 import { Navigation } from 'react-native-navigation';
-import { NavigationProvider, useNavigationButtonPress } from 'react-native-navigation-hooks';
+import {
+  NavigationProvider,
+  useNavigationButtonPress,
+} from 'react-native-navigation-hooks';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  HttpLink,
+} from '@apollo/client';
 import CONFIG from '~/constants/envConfig';
 import theme from '~/theme';
-import { getNormalStack } from '~/routes/stack';
 
 const app = new Realm.App({
   id: CONFIG.realm.appId,
@@ -26,7 +34,7 @@ async function getValidAccessToken() {
     // valid, we refresh the user's custom data which also refreshes their access token.
     await app.currentUser.refreshCustomData();
   }
-  return app.currentUser.accessToken
+  return app.currentUser.accessToken;
 }
 
 const client = new ApolloClient({
@@ -47,15 +55,15 @@ const client = new ApolloClient({
 
 const App = Component => props => {
   useNavigationButtonPress(
-    (e) => {
-      switch(e.buttonId) {
+    e => {
+      switch (e.buttonId) {
         case 'logo':
           Navigation.mergeOptions('SideMenu', {
             sideMenu: {
               left: {
                 visible: true,
-              }
-            }
+              },
+            },
           });
           break;
       }

@@ -32,7 +32,9 @@ const authRoutes = title => {
         center: {
           bottomTabs: {
             children: [
-              ...bottomTabs.map(tab => getBottomStack({...tab, title: `${title}'s House`}))
+              ...bottomTabs.map(tab =>
+                getBottomStack({ ...tab, title: `${title}'s House` })
+              ),
             ],
           },
         },

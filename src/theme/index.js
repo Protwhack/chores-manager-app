@@ -7,7 +7,7 @@ const theme = {
     grey3: '#F3F3F3',
     white: '#FFFFFF',
     underlay: '#FFF0DF',
-  }
+  },
 };
 
 export default theme;

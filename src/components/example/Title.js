@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { normalize } from '~/utils/styling';
 
-const Title = (props) => (
+const Title = props => (
   <View>
     <Text style={styles.title}>{props.children}</Text>
   </View>

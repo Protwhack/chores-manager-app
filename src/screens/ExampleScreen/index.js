@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView, Text } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import Title from '~/components/example/Title';
 import GraphqlResultList from '~/components/example/GraphqlResultList';
 

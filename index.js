@@ -10,7 +10,7 @@ Navigation.setDefaultOptions({
   bottomTab: {
     selectedTextColor: theme.colors.primary,
     textColor: theme.colors.grey1,
-  }
+  },
 });
 
 Navigation.events().registerAppLaunchedListener(async () => {

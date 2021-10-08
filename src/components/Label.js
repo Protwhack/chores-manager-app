@@ -12,8 +12,6 @@ const Label = ({ text, textColor, backgroundColor }) => {
 const styles = StyleSheet.create({
   labelView: backgroundColor => ({
     backgroundColor: backgroundColor,
-    // justifyContent: 'space-between',
-    alignSelf: 'flex-start',
     // FIX: The values need to be confirmed
     borderRadius: 18,
     paddingRight: 15,

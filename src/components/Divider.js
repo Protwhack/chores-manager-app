@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Divider } from 'react-native-elements';
 import { View } from 'react-native';
 
 const Divider = ({ height = 1, backgroundColor = '#BCBCBC' }) => {

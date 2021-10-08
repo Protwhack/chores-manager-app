@@ -2,10 +2,7 @@ import React from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 import Label from './Label';
 
-const labelTextColor = '#404040';
-const labelBackgroundColor = '#EAFFEA';
-
-const LabelContainer = ({ items }) => {
+const LabelContainer = ({ items, labelTextColor, labelBackgroundColor }) => {
   return (
     <View style={styles.labelContainer}>
       <FlatList

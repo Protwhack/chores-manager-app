@@ -1,11 +1,11 @@
 import { Navigation } from 'react-native-navigation';
-import { getNormalStack } from './stack';
+import { getPlainScreenOptions } from './stack';
 
 const noAuthRoute = () => {
   Navigation.setRoot({
     root: {
       stack: {
-        children: [getNormalStack('Login', 'Login')],
+        children: [getPlainScreenOptions('Login', 'Login')],
       },
     },
   });

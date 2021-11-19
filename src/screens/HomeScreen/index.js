@@ -3,6 +3,7 @@ import { View, Text, FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { useQuery } from '@apollo/client';
 import { GET_EXCHANGE_RATES } from '~/gql/exchange';
+import { keyExtractor } from '~/utils/list';
 
 const Item = ({ item }) => {
   const { currency, rate } = item;
@@ -14,7 +15,7 @@ const Item = ({ item }) => {
   );
 };
 
-const HomeScrenn = () => {
+const HomeScreen = () => {
   const { data, loading } = useQuery(GET_EXCHANGE_RATES);
   if (loading) {
     return (
@@ -28,11 +29,11 @@ const HomeScrenn = () => {
     <FlatList
       data={data?.rates ?? []}
       renderItem={({ item }) => <Item item={item} />}
-      keyExtractor={item => item.currency.toString()}
+      keyExtractor={keyExtractor}
     />
   );
 };
 
-HomeScrenn.screenName = 'Home';
+HomeScreen.screenName = 'Home';
 
-export default HomeScrenn;
+export default HomeScreen;

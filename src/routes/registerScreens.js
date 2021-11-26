@@ -3,7 +3,7 @@ import App from '~/App';
 
 import AddHomeScreen from '~/screens/AddHomeScreen';
 import AllChoresScreen from '~/screens/AllChoresScreen';
-import HomeScreen from '~/screens/HomeScreen';
+import CalendarScreen from '~/screens/CalendarScreen';
 import HomeEntranceScreen from '~/screens/HomeEntranceScreen';
 import LoginScreen from '~/screens/LoginScreen';
 import OtherScreen from '~/screens/OtherScreen';
@@ -13,7 +13,7 @@ import ExampleScreen from '~/screens/ExampleScreen';
 const screens = [
   AddHomeScreen,
   AllChoresScreen,
-  HomeScreen,
+  CalendarScreen,
   HomeEntranceScreen,
   LoginScreen,
   OtherScreen,

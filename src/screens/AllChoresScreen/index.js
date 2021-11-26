@@ -1,13 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Text } from 'react-native-elements';
+import SpaceAccordionList from 'Components/SpaceAccordionList';
 
 const AllChores = () => {
-  return (
-    <View>
-      <Text>All Chores</Text>
-    </View>
-  );
+  return <SpaceAccordionList />;
 };
 
 AllChores.screenName = 'AllChores';

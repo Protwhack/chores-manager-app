@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const GET_AREAS = gql`
   query GetAreas {
-    areas {
+    areas(query: { deletedAt_exists: false }) {
       _id
       color
       createdAt

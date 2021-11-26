@@ -5,7 +5,7 @@ import { Text } from 'react-native-elements';
 const Body = item => {
   return (
     <View>
-      <Text>Chores: {JSON.stringify(item.chores)}</Text>
+      <Text>Routines</Text>
     </View>
   );
 };

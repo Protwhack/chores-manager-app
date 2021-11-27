@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { ListItem, FAB } from 'react-native-elements';
 import { useQuery } from '@apollo/client';
+import createRoutineModalRoutes from '~/routes/createRoutineModalRoutes';
 import { GET_EXCHANGE_RATES } from '~/gql/exchange';
 import { keyExtractor } from '~/utils/list';
 import theme from '~/theme';
@@ -38,7 +39,9 @@ const CalendarScreen = () => {
         color={theme.colors.primary}
         icon={{ type: 'feather', name: 'plus', color: '#fff' }}
         buttonStyle={styles.fabButton}
-        onPress={() => console.log('Add a routine')}
+        onPress={() => {
+          createRoutineModalRoutes();
+        }}
       />
     </>
   );

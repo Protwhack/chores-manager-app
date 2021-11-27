@@ -66,6 +66,9 @@ const App = Component => props => {
             },
           });
           break;
+        case 'closeModal':
+          Navigation.dismissModal(props.componentId);
+          break;
       }
     },
     { componentId: props.componentId }

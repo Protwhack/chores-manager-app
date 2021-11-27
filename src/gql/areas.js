@@ -14,3 +14,23 @@ export const GET_AREAS = gql`
     }
   }
 `;
+
+export const GET_AREAS_CHORES = gql`
+  query GetAreasChores {
+    areas(query: { deletedAt_exists: false }) {
+      _id
+      color
+      createdAt
+      deletedAt
+      imageUrl
+      iconUrl
+      name
+      note
+      updatedAt
+      chores {
+        _id
+        name
+      }
+    }
+  }
+`;

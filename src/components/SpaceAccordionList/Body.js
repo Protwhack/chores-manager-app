@@ -10,6 +10,4 @@ const Body = item => {
   );
 };
 
-Body.screenName = 'Body';
-
 export default Body;

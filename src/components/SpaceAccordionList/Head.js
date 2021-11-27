@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Tile } from 'react-native-elements';
-import { normalize, SCREEN_WIDTH } from 'Utils/styling';
+import { normalize } from 'Utils/styling';
 
 const Head = item => {
   return (
@@ -11,7 +11,7 @@ const Head = item => {
         titleStyle={styles.title}
         imageSrc={{ uri: item.imageUrl }}
         title={item.name}
-        height={SCREEN_WIDTH * 0.32}
+        height={normalize(120)}
         featured
       />
     </View>
@@ -27,7 +27,5 @@ const styles = StyleSheet.create({
     fontSize: normalize(18),
   },
 });
-
-Head.screenName = 'Head';
 
 export default Head;

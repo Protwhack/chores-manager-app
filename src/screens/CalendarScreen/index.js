@@ -37,7 +37,7 @@ const CalendarScreen = () => {
       <FAB
         placement='right'
         color={theme.colors.primary}
-        icon={{ type: 'feather', name: 'plus', color: '#fff' }}
+        icon={{ type: 'feather', name: 'plus', color: theme.colors.white }}
         buttonStyle={styles.fabButton}
         onPress={() => {
           createRoutineModalRoutes();

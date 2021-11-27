@@ -13,7 +13,6 @@ const renderItem = ({ item }) => (
       <ListItem.Subtitle>{`Color: ${item.color}`}</ListItem.Subtitle>
       <ListItem.Subtitle>{`Chores: ${item.chores}`}</ListItem.Subtitle>
     </ListItem.Content>
-    <ListItem.Chevron />
   </ListItem>
 );
 

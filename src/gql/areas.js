@@ -8,6 +8,7 @@ export const GET_AREAS = gql`
       createdAt
       deletedAt
       imageUrl
+      iconUrl
       name
       note
       updatedAt

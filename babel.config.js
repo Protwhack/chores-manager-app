@@ -13,6 +13,14 @@ module.exports = {
             rootPathPrefix: 'Assets',
             rootPathSuffix: 'src/assets',
           },
+          {
+            rootPathPrefix: 'Components',
+            rootPathSuffix: 'src/components',
+          },
+          {
+            rootPathPrefix: 'Utils',
+            rootPathSuffix: 'src/utils',
+          },
         ],
       },
     ],
